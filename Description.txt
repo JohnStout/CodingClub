@@ -1,0 +1,16 @@
+I organized and put together a club whereby lab member would get together virtually (during COVID-19 pandemic time)
+to learn how to code and analyze data.
+
+Since MATLAB is a pay-to-play gig, and since our lab specifically uses MATLAB, I decided to start some sessions by 
+demonstrating how we extract, convert, and analyze neural data. This part of the process allows users some second-hand
+MATLAB experience, and to see a general workflow unfold in front of them. This is an important concept because learning
+how to code is also learning how to set up and visualize what you want to do.
+
+Then, because of the pay-to-play set-up of MATLAB, we took the code to free languages; specifically R and Python. I 
+chose these languages as they have great libraries to analyze what we want to do. But also because they were two languages
+that I had some experience with, but could get much better at.
+
+So this club serves multiple purposes:
+1) teach people how to code
+2) teach people how to organize/analyze data in a script/function
+3) learn more than one language
