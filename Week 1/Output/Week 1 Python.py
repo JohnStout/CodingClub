@@ -41,6 +41,9 @@ Y_data = np.resize(ExtractedY,(numSamples,))
 
 # load in matplotlib library
 import matplotlib.pyplot as plt # a plotting library
+
+# select a subset of data (data points from start to 50). We're not going to 
+# plot this, but it's good to know how to do this
 sampleX = X_data[:50]
 sampleY = Y_data[:50]
 
@@ -51,8 +54,47 @@ plt.ylabel("Y-position (in pixels)")
 plt.plot(X_data,Y_data)
 plt.show()
 
+#-----------------------------------------------------------------------------#
+#                          Plot data trial-by-trial
+#-----------------------------------------------------------------------------#
+
+# this approach is a bit different from what we did earlier. We don't need to
+# change the ExtractedX, Y, and timestamps variables
+
 # plot data on a trial-by-trial basis
-for i in range(0,np.size(clusters)):
+trialNum = np.size(Int,0)
+
+# remember that python uses 0 indexing
+Times = [] # initialize variable
+Xdata = []
+Ydata = []
+
+# for loop - get x, y, and times for every trial
+for i in range(0,trialNum): # notice that syntax may change, but concept doesn't
+    idx          = np.where(np.logical_and(TimeStamps>Int[i,0], TimeStamps<Int[i,5]))
+    Times.append(TimeStamps[idx])
+    Xdata.append(ExtractedX[idx])
+    Ydata.append(ExtractedY[idx])
+    
+# like in the matlab code, plot data on a trial-by-trial basis
+for i in range(0,trialNum): # notice that syntax may change, but concept doesn't
+    plt.plot(Xdata[i],Ydata[i])
+    
+plt.show()
+
+    
+#-----------------------------------------------------------------------------#
+#                              Load in LFP data
+#-----------------------------------------------------------------------------#
+
+
+
+
+
+
+
+
+
 
 
 
