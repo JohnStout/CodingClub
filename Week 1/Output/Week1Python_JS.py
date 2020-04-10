@@ -81,11 +81,22 @@ for i in range(0,trialNum): # notice that syntax may change, but concept doesn't
     plt.plot(Xdata[i],Ydata[i])
     
 plt.show()
-
     
 #-----------------------------------------------------------------------------#
 #                              Load in LFP data
 #-----------------------------------------------------------------------------#
+
+# load in LFP data
+LFPdata = sio.loadmat('CSC14.mat')
+
+# extract LFP
+csc14 = LFPdata["Samples"]
+
+# concatenate LFP data
+csc14[0,:]
+
+
+
 
 
 
