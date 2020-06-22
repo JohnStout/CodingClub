@@ -8,13 +8,15 @@
 % x: a matrix that you want sorted. Should be formated with rows being cell
 % number and columns being observation
 % y: a matrix that you want to sort by. Same formatting as above
+% plot: set 1 if plot, 0 if no plot
 %
 % OUTPUTS:
 % figure
+% xsort: sorted x variable
 %
 % writen by John Stout
 
-function [] = SortedRateMap(x,y)
+function [x_sort] = SortedRateMap(x,y,plot,jetOn)
 
 % normalize each row between 0 and 1
 numcells = size(x,1);
@@ -38,12 +40,16 @@ x_sort = x_norm(idxsort,:);
 
 % make figure
 %figure('color','w');
-imagesc(x_sort);
-colormap default
-colorbar
-ylabel('Neuron ID')
-xlabel('Bin Number')
-set(gca,'FontSize',13);
-%colormap('jet')
+if plot == 1
+    imagesc(x_sort);
+    colormap default
+    colorbar
+    ylabel('Neuron ID')
+    xlabel('Bin Number')
+    set(gca,'FontSize',13);
+    if jetOn == 1
+        colormap('jet')
+    end
+end
 
 end
